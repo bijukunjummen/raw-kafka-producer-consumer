@@ -1,0 +1,8 @@
+jar {
+    baseName = project.name
+    version = '1.1.0.SNAPSHOT'
+}
+
+dependencies {
+    compile("com.fasterxml.jackson.core:jackson-databind:2.8.4")
+}

@@ -1,2 +1,1 @@
-
-include('sample-raw-producer', 'sample-raw-consumer')
+include('sample-raw-producer', 'sample-raw-consumer', 'json-serializers')

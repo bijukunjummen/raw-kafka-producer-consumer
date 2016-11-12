@@ -5,8 +5,8 @@ import org.apache.kafka.common.serialization.Deserializer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.kafka.support.serializer.JsonDeserializer;
 import sample.consumer.domain.WorkUnit;
+import sample.serializer.JsonDeserializer;
 
 import java.util.Collections;
 import java.util.Properties;
