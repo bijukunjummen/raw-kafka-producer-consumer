@@ -1,1 +1,2 @@
+rootProject.name="raw-kafka-producer-consumer"
 include('sample-raw-producer', 'sample-raw-consumer', 'json-serializers')
