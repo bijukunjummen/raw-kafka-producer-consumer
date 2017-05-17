@@ -19,6 +19,7 @@ public class ConsumerConfig {
         Properties props = new Properties();
         props.put("bootstrap.servers", kafkaConsumerProperties.getBootstrap());
         props.put("group.id", kafkaConsumerProperties.getGroup());
+        props.put("auto.offset.reset", "earliest");
 //        props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
 //        props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         KafkaConsumer<String, WorkUnit> consumer = new KafkaConsumer<>(props, stringKeyDeserializer(), workUnitJsonValueDeserializer());

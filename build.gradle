@@ -1,6 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '1.4.2.RELEASE'
+        springBootVersion = '1.5.3.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -22,7 +22,9 @@ subprojects {
     }
 
     dependencies {
-        compile "org.apache.kafka:kafka-clients:0.10.1.0"
+        compile("org.apache.kafka:kafka-clients:0.10.1.1") {
+            exclude group: 'org.slf4j', module: 'slf4j-api'
+        }
         compile 'com.google.guava:guava:20.0'
     }
 

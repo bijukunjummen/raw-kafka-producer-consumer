@@ -21,8 +21,8 @@ public class WorkUnitsConsumer implements Runnable {
             while (true) {
                 ConsumerRecords<String, WorkUnit> records = this.workUnitsConsumer.poll(100);
                 for (ConsumerRecord<String, WorkUnit> record : records) {
-                    log.info("consuming from topic = {}, partition = {}, offset = {}, key = {}, value = {}",
-                            record.topic(), record.partition(), record.offset(), record.key(), record.value());
+                    log.info("consuming from topic = {}, partition = {}, ts = {}, ts-type = {},  offset = {}, key = {}, value = {}",
+                            record.topic(), record.partition(), record.timestamp(), record.timestampType(), record.offset(), record.key(), record.value());
 
                 }
             }
